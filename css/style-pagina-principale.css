@@ -1,5 +1,7 @@
 body{
     background-color: #164fbd;
+    margin: 0;
+    padding: 0;
 }
 
 header{
@@ -39,4 +41,21 @@ a {
 
 .img-res{
     width: 100%; height: auto;
+}
+
+header .logo {
+    width: 80px;                 
+    height: auto;                
+    position: absolute;          
+    top: 20px;                   
+    left: 10px;                  
+}
+
+#titolo-header {
+    text-align: center;
+    margin: 0;
+    color: #0f2252;           
+    font-size: 40px;       
+    font-weight: bold; 
+    padding: 15px;    
 }
