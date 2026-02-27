@@ -30,3 +30,13 @@ a {
     color: #000;
     font-weight: bold;
 }
+
+.img-centrata{
+    display: block;
+    margin: 50px auto;
+    
+}
+
+.img-res{
+    width: 100%; height: auto;
+}
