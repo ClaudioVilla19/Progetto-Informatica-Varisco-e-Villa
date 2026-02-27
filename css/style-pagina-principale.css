@@ -1,3 +1,20 @@
 body{
     background-color: #164fbd;
 }
+
+#menu-principale{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;      
+    margin: 0;
+    list-style: none;  
+}
+
+#menu-principale li {
+    margin: 0 10px;       
+    text-decoration: none;
+    color: #000;
+    
+}
+
