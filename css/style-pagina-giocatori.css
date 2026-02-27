@@ -2,6 +2,7 @@ body{
     background-color: #164fbd;
     margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 header{
@@ -13,15 +14,13 @@ header{
 
 #menu-principale{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 15px;      
-    margin: 0;
+    padding: auto;     
+    margin: auto;
     list-style: none;  
 }
 
 #menu-principale li {
-    margin: 0 10px;       
+    margin: 15px 10px;       
     text-decoration: none;
     color: #000;
     
@@ -49,3 +48,14 @@ header .logo {
     font-weight: bold; 
     padding: 15px;    
 }
+
+.img-centrata{
+    display: block;
+    margin: 50px auto;
+    
+}
+
+.img-res{
+    width: 100%; height: auto;
+}
+
