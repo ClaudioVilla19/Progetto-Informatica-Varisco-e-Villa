@@ -33,16 +33,6 @@ a {
     font-weight: bold;
 }
 
-.img-centrata{
-    display: block;
-    margin: 50px auto;
-    
-}
-
-.img-res{
-    width: 100%; height: auto;
-}
-
 header .logo {
     width: 80px;                 
     height: auto;                
@@ -59,4 +49,3 @@ header .logo {
     font-weight: bold; 
     padding: 15px;    
 }
-
