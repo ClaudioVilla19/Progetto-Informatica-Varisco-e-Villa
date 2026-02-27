@@ -2,6 +2,13 @@ body{
     background-color: #164fbd;
 }
 
+header{
+    background: #d8e0e8; padding: 25px 15px 5px 15px; width: 100%;
+    font-family: Arial;
+    width: 100%;
+    position: relative; 
+}
+
 #menu-principale{
     display: flex;
     justify-content: space-around;
@@ -18,3 +25,8 @@ body{
     
 }
 
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
