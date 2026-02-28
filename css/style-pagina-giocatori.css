@@ -59,3 +59,36 @@ header .logo {
     width: 100%; height: auto;
 }
 
+.grid {
+    display: flex;
+    border: 1px solid red;
+    margin: 10px;
+}
+
+.grid__sx {
+    width: 40%;
+    font-size: 30px
+}
+
+.grid__sx img {
+    width: 100%;
+    height: auto;
+}
+
+.grid__dx {
+    display: flex;
+    width: 60%;
+    padding: 10px;
+    align-items: center;
+}
+
+.grid__dx_descrizione h3{
+    font-size: 35px;
+    text-align: center;
+    color: #d8e0e8;
+}
+.grid__dx_descrizione p{
+    font-size: 20px;
+    color: #d8e0e8;
+    text-align: justify;
+}
