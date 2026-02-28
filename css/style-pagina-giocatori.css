@@ -1,3 +1,5 @@
+*{box-sizing: border-box;}
+
 body{
     background-color: #164fbd;
     margin: 0;
@@ -49,30 +51,30 @@ header .logo {
     padding: 15px;    
 }
 
-.img-centrata{
-    display: block;
-    margin: 50px auto;
-    
-}
-
-.img-res{
-    width: 100%; height: auto;
+.img-piccola{
+    width: 100%;
+    height: auto;
 }
 
 .grid {
     display: flex;
-    border: 1px solid red;
-    margin: 10px;
+    width : 90%;
+    margin: 10px auto;
+    padding: 50px;
 }
 
 .grid__sx {
+    box-sizing: border-box;
     width: 40%;
-    font-size: 30px
+    padding: 0 10px;
+    text-align: left;
 }
 
-.grid__sx img {
-    width: 100%;
+.grid__sx .img-piccola {
+    max-width: 50%;
     height: auto;
+    display: block;
+    margin: 0;
 }
 
 .grid__dx {
@@ -83,12 +85,12 @@ header .logo {
 }
 
 .grid__dx_descrizione h3{
-    font-size: 35px;
+    font-size: 30px;
     text-align: center;
     color: #d8e0e8;
 }
 .grid__dx_descrizione p{
-    font-size: 20px;
+    font-size: 18px;
     color: #d8e0e8;
     text-align: justify;
 }
