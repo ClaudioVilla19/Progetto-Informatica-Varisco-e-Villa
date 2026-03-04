@@ -6,9 +6,10 @@ body{
 }
 
 header{
-    background: #d8e0e8; padding: 25px 15px 5px 15px; width: 100%;
-    font-family: Arial;
+    background: #d8e0e8; 
+    padding: 20px 15px; 
     width: 100%;
+    font-family: Arial;
     position: relative; 
 }
 
@@ -16,15 +17,17 @@ header{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 15px;      
+    gap: 30px;
+    padding: 15px 0;      
     margin: 0;
     list-style: none;  
 }
 
 #menu-principale li {
-    margin: 0 10px;       
+    margin: 0;       
     text-decoration: none;
     color: #000;
+    font-size: 16px;
     
 }
 
@@ -32,6 +35,19 @@ a {
     text-decoration: none;
     color: #000;
     font-weight: bold;
+}
+#menu-principale li a {
+    display: block;
+    padding: 12px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+#menu-principale li a:hover {
+    background-color: #164fbd;
+    color: #d8e0e8;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .img-centrata{
@@ -41,15 +57,16 @@ a {
 }
 
 .img-res{
-    width: 100%; height: auto;
+    width: 100%; 
+    height: auto;
 }
 
 header .logo {
     width: 80px;                 
     height: auto;                
     position: absolute;          
-    top: 20px;                   
-    left: 10px;                  
+    top: 15px;                   
+    left: 15px;                  
 }
 
 #titolo-header {
@@ -58,6 +75,81 @@ header .logo {
     color: #0f2252;           
     font-size: 40px;       
     font-weight: bold; 
-    padding: 15px;    
+    padding: 10px 80px;    
 }
 
+main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.hero { display: flex; gap: 20px; align-items: center; margin-bottom: 30px; } 
+.hero-img { width: 60%; max-width: 600px; height: auto; border-radius: 10px; object-fit: cover; } 
+.hero-text h2 { margin: 0 0 8px 0; }
+
+.stats-section {
+  margin: 20px 0 40px;
+}
+
+.stats-section h2 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.stats-row {
+  display: flex;
+  gap: 25px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+.stat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px;
+  border-radius: 16px;
+
+  background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.stat:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.stat-icon {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+.stat-number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f2252;
+}
+
+.stat-label {
+  font-size: 1rem;
+  color: #333;
+}
+
+
+
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #0f2252;
+    color: #fff;
+    width: 100%;
+}
