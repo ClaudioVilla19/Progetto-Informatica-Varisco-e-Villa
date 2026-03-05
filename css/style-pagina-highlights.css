@@ -9,10 +9,16 @@
    BODY
 =========================== */
 
+html, body {
+    height: 100%;
+}
+
 body {
     background-color: #164fbd;
     font-family: Arial, sans-serif;
     color: #fff;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ===========================
@@ -44,11 +50,8 @@ header,
     flex: 1;
 }
 
-#menu-principale,
-.header__nav {
-    display: flex;
-    gap: 20px;
-    list-style: none;
+main {
+    flex: 1;
 }
 
 /* ===========================
