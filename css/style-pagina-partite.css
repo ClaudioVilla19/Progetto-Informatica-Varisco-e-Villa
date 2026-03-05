@@ -230,8 +230,7 @@ header .logo,
     justify-content: center;
     align-items: flex-start;
     gap: 60px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 20px 0;
 }
 
 .bracket .round:nth-child(2),
@@ -320,72 +319,34 @@ footer,
 
 @media (max-width: 900px) {
 
-    /* Bracket più stretto */
-    .bracket,
-    .bracket__container {
-        gap: 25px;              /* prima 60px */
-        padding: 10px 0;
-        transform: scale(0.95); /* leggero rimpicciolimento */
-    }
-
-    /* Ogni round si restringe leggermente */
-    .round,
-    .bracket__round {
-        width: 220px;           /* prima 260px */
-        min-width: 200px;
-        transform: scale(0.92);
-    }
-
-    /* Match più compatti */
-    .match,
-    .bracket__match {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-    }
-
-    /* Tabelle e card si riducono leggermente */
-    .tabella-girone table,
-    .girone__table {
-        transform: scale(0.95);
+    /* Squadre */
+    .squadre-grid,
+    .gruppo__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
     }
 
     .card,
     .squadra__card {
         transform: scale(0.92);
     }
-}
 
-@media (max-width: 900px) and (min-width: 600px) {
+    /* Tabelle */
+    .tabella-girone table,
+    .girone__table {
+        width: 100%;
+        transform: scale(0.95);
+    }
 
-    /* Il contenitore del cammino si restringe */
+    /* Bracket */
     .bracket,
     .bracket__container {
-        gap: 25px;                 /* prima 60px */
-        padding: 10px 20px;        /* margini laterali */
-        transform: scale(0.85);    /* schiaccia tutto */
-        transform-origin: top center;
+        gap: 25px;
     }
 
-    /* Ogni colonna (Ottavi, Quarti, Semifinali, Finale) si stringe */
     .round,
     .bracket__round {
-        width: 200px;              /* prima 260px */
-        min-width: 180px;
-        padding: 15px;
-    }
-
-    /* Match più compatti */
-    .match,
-    .bracket__match {
-        padding: 8px 10px;
-        font-size: 0.85rem;
-    }
-
-    /* Titoli più piccoli */
-    .round h3,
-    .bracket__round-title {
-        font-size: 1rem;
-        margin-bottom: 8px;
+        transform: scale(0.9);
     }
 }
 
@@ -395,42 +356,53 @@ footer,
 
 @media (max-width: 600px) {
 
-    /* Bracket verticale */
-    .bracket,
-    .bracket__container {
-        flex-direction: column;
-        align-items: center;
-        gap: 35px;
-        transform: scale(0.9);
+    .titolo,
+    .header__title {
+        font-size: 28px;
     }
 
-    /* Round centrati e più piccoli */
-    .round,
-    .bracket__round {
-        width: 90%;
-        max-width: 260px;
-        transform: scale(0.9);
+    header .logo,
+    .header__logo {
+        width: 60px;
     }
 
-    /* Match più piccoli */
-    .match,
-    .bracket__match {
-        padding: 8px 10px;
-        font-size: 0.8rem;
+    /* Squadre */
+    .squadre-grid,
+    .gruppo__grid {
+        grid-template-columns: 1fr;
     }
 
-    /* Tabelle più piccole */
-    .tabella-girone table,
-    .girone__table {
-        width: 100%;
-        transform: scale(0.9);
-    }
-
-    /* Card squadre più piccole */
     .card,
     .squadra__card {
         width: 90%;
         margin: 0 auto;
         transform: scale(0.88);
+    }
+
+    /* Tabelle */
+    .tabella-girone table,
+    .girone__table {
+        font-size: 0.85rem;
+        transform: scale(0.9);
+    }
+
+    /* Bracket */
+    .bracket,
+    .bracket__container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .round,
+    .bracket__round {
+        width: 90%;
+        margin: 0 auto;
+        transform: scale(0.9);
+    }
+
+    footer,
+    .footer {
+        font-size: 16px;
+        padding: 12px;
     }
 }
