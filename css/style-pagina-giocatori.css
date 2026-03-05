@@ -251,6 +251,15 @@ header .logo,
     }
 }
 
+footer,
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #0f2252;
+    color: #fff;
+    margin-top: 40px;
+}
+
 /* ===========================
    RESPONSIVE — SMARTPHONE (<600)
 =========================== */

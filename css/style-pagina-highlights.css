@@ -106,6 +106,15 @@ header,
     text-align: justify;
 }
 
+footer,
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #0f2252;
+    color: #fff;
+    margin-top: 40px;
+}
+
 /* ===========================
    RESPONSIVE — TABLET (900–600)
 =========================== */
