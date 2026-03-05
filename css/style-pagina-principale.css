@@ -13,8 +13,6 @@ header{
     position: relative;
 }
 
-
-
 #menu-principale{
     display: flex;
     justify-content: space-around;
@@ -38,28 +36,20 @@ a {
     color: #000;
     font-weight: bold;
 }
+
 #menu-principale li a {
     display: block;
     padding: 10px 15px;
     transition: all 0.3s ease;
     position: absolute;
     bottom: 0;
+    font-size: 17px;
 }
 
 #menu-principale li a:hover {
     background-color: #164fbd;
     color: #d8e0e8;
-}
-
-.img-centrata{
-    display: block;
-    margin: 50px auto;
-    
-}
-
-.img-res{
-    width: 100%; 
-    height: auto;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
 header .logo {
@@ -87,9 +77,27 @@ main {
     font-family: Arial, sans-serif;
 }
 
-.hero { display: flex; gap: 20px; align-items: center; margin-bottom: 30px; } 
-.hero-img { width: 60%; max-width: 600px; height: auto; border-radius: 10px; object-fit: cover; } 
-.hero-text h2 { margin: 0 0 8px 0; }
+.hero { 
+    display: flex;
+    gap: 20px; 
+    align-items: center;
+    margin-bottom: 30px; 
+} 
+
+.hero-img {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+
+    flex-shrink: 0;        
+    object-fit: contain;   
+    object-position: center;
+}
+
+.hero-text h2 { 
+    margin: 0 0 8px 0; 
+}
 
 .stats-section {
     margin: 20px 0 40px;
@@ -171,7 +179,7 @@ main {
 .curiosita-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
+    gap: 40px 60px;
 }
 
 .curiosita-card {
