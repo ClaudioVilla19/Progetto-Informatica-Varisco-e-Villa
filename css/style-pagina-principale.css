@@ -1,122 +1,164 @@
-body,
-html{padding:0; margin:0;}
-
-body{
-    background-color: #164fbd;
+/* RESET BASE */
+html,
+body {
+    padding: 0;
+    margin: 0;
 }
 
-header{
+/* ===========================
+   BODY
+=========================== */
+
+body {
+    background-color: #164fbd;
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================
+   HEADER (BEM + tuo codice)
+=========================== */
+
+header,
+.header {
     background: #d8e0e8;
-    padding: 20px 16px;  
+    padding: 10px 16px;
     width: 100%;
-    font-family: Arial;
     position: relative;
 }
 
-#menu-principale{
+/* logo = elemento BEM: header__logo */
+header .logo,
+.header__logo {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+/* titolo = header__title */
+#titolo-header,
+.header__title {
+    text-align: center;
+    margin: 0;
+    color: #0f2252;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0px 0px 10px 0px;
+}
+
+/* menu = header__nav */
+#menu-principale,
+.header__nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 30px;
-    padding: 0; 
-    margin-top: 8px;    
-    list-style: none;  
+    padding: 0;
+    margin-top: 8px;
+    list-style: none;
 }
 
-#menu-principale li {
-    margin: 0;       
+/* voce menu = header__nav-item */
+#menu-principale li,
+.header__nav-item {
+    margin: 0;
     text-decoration: none;
     color: #000;
     font-size: 16px;
-    
 }
 
-a {
+/* link = header__nav-link */
+a,
+.header__nav-link {
     text-decoration: none;
     color: #000;
     font-weight: bold;
 }
 
-#menu-principale li a {
+/* link nel menu (tolgo solo il position:absolute che rompe il layout) */
+#menu-principale li a,
+.header__nav-link {
     display: block;
     padding: 10px 15px;
     transition: all 0.3s ease;
-    position: absolute;
-    bottom: 0;
     font-size: 17px;
+    position: static;
+    
 }
 
-#menu-principale li a:hover {
+#menu-principale li a:hover,
+.header__nav-link:hover {
     background-color: #164fbd;
     color: #d8e0e8;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-header .logo {
-    width: 80px;                 
-    height: auto;                
-    position: absolute;          
-    top: 15px;                   
-    left: 15px;                  
-}
+/* ===========================
+   MAIN (BEM: page-main)
+=========================== */
 
-#titolo-header {
-    text-align: center;
-    margin: 0;
-    color: #0f2252;           
-    font-size: 40px;       
-    font-weight: bold; 
-    padding: 0;    
-}
-
-main {
+main,
+.page-main {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px 15px;
     color: #fff;
-    font-family: Arial, sans-serif;
 }
 
-.hero { 
-    display: flex;
-    gap: 20px; 
-    align-items: center;
-    margin-bottom: 30px; 
-} 
+/* ===========================
+   HERO (già ok, aggiungo BEM)
+=========================== */
 
-.hero-img {
+.hero,
+.hero-block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-img,
+.hero__img {
     width: 60%;
     max-width: 600px;
     height: auto;
     border-radius: 10px;
-
-    flex-shrink: 0;        
-    object-fit: contain;   
+    flex-shrink: 0;
+    object-fit: contain;
     object-position: center;
 }
 
-.hero-text h2 { 
-    margin: 0 0 8px 0; 
+.hero-text h2,
+.hero__title {
+    margin: 0 0 8px 0;
 }
 
-.stats-section {
+/* ===========================
+   STATS SECTION (BEM)
+=========================== */
+
+.stats-section,
+.stats {
     margin: 20px 0 40px;
 }
 
-.stats-section h2 {
+.stats-section h2,
+.stats__title {
     margin-bottom: 20px;
     text-align: center;
 }
 
-.stats-row {
+.stats-row,
+.stats__row {
     display: flex;
     gap: 25px;
     justify-content: space-between;
     flex-wrap: nowrap;
 }
 
-
-.stat {
+.stat,
+.stats__item {
     flex: 1;
     display: flex;
     align-items: center;
@@ -130,12 +172,14 @@ main {
     transition: transform .25s ease, box-shadow .25s ease;
 }
 
-.stat:hover {
+.stat:hover,
+.stats__item:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 8px 20px rgba(0,0,0,0.25);
 }
 
-.stat::after {
+.stat::after,
+.stats__item::after {
     content: "";
     position: absolute;
     bottom: 0;
@@ -146,94 +190,233 @@ main {
     pointer-events: none;
 }
 
-.stat-icon {
+.stat-icon,
+.stats__icon {
     width: 65px;
     height: 65px;
     object-fit: contain;
 }
 
-.stat-number {
+.stat-number,
+.stats__number {
     font-size: 2rem;
     font-weight: 700;
     color: #0f2252;
 }
 
-.stat-label {
+.stat-label,
+.stats__label {
     font-size: 1rem;
     color: #333;
 }
 
+/* ===========================
+   CURIOSITÀ SECTION (BEM)
+=========================== */
 
-
-.curiosita-section {
+.curiosita-section,
+.curiosita {
     margin: 50px 0;
     text-align: center;
 }
 
-.curiosita-title {
+.curiosita-title,
+.curiosita__title {
     font-size: 2rem;
     margin-bottom: 25px;
     color: #ffffff;
 }
 
-.curiosita-grid {
+.curiosita-grid,
+.curiosita__grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 60px;
 }
 
-.curiosita-card {
+.curiosita-card,
+.curiosita__card {
     padding: 25px 20px;
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: transform .25s ease, box-shadow .25s ease;
     background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
-    position: relative;   
-    overflow: hidden;    
+    position: relative;
+    overflow: hidden;
 }
 
-
-.curiosita-card::after { 
-    content: ""; 
-    position: absolute; 
-    bottom: 0; 
-    left: 0; 
-    width: 100%; 
-    height: 45%; 
-    background: linear-gradient(to top, rgba(22, 79, 189, 0.55), rgba(22, 79, 189, 0)); 
-    pointer-events: none; 
+.curiosita-card::after,
+.curiosita__card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to top, rgba(22, 79, 189, 0.55), rgba(22, 79, 189, 0));
+    pointer-events: none;
 }
 
-.curiosita-card:hover {
+.curiosita-card:hover,
+.curiosita__card:hover {
     transform: translateY(-6px) scale(1.03);
     box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
-.curiosita-icon {
+.curiosita-icon,
+.curiosita__icon {
     width: 60px;
     height: 60px;
     margin-bottom: 12px;
 }
 
-.curiosita-card h3 {
+.curiosita-card h3,
+.curiosita__card-title {
     margin: 8px 0;
     color: #0f2252;
     font-size: 1.3rem;
 }
 
-.curiosita-card p {
+.curiosita-card p,
+.curiosita__card-text {
     color: #333;
     font-size: 1rem;
 }
 
+/* ===========================
+   FOOTER (BEM)
+=========================== */
 
-
-
-footer {
+footer,
+.footer {
     text-align: center;
     padding: 15px;
-    background: #d8e0e8; 
+    background: #d8e0e8;
     color: #0f2252;
     width: 100%;
     font-size: 20px;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+/* Tablet / smartphone */
+/* ===========================
+   RESPONSIVE — TABLET
+=========================== */
+
+@media (max-width: 900px) {
+    #menu-principale,
+    .header__nav {
+        justify-content: center;   /* invece di space-around */
+        gap: 10px;                 /* riduce la distanza tra le voci */
+    }
+
+    /* HERO in colonna */
+    .hero,
+    .hero-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img,
+    .hero__img {
+        width: 100%;
+    }
+
+    /* STATISTICHE in colonna */
+    .stats-row,
+    .stats__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat,
+    .stats__item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* CURIOSITÀ in colonna */
+    .curiosita-grid,
+    .curiosita__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .curiosita-card,
+    .curiosita__card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* MENU diventa più morbido */
+    #menu-principale,
+    .header__nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+/* ===========================
+   RESPONSIVE — SMARTPHONE
+=========================== */
+
+@media (max-width: 600px) {
+
+    /* MENU VERTICALE */
+    #menu-principale,
+    .header__nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #menu-principale li a,
+    .header__nav-link {
+        position: static;     /* fondamentale per farlo funzionare */
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    /* TITOLO più piccolo */
+    #titolo-header,
+    .header__title {
+        font-size: 28px;
+        padding-top: 10px;
+    }
+
+    /* LOGO più piccolo */
+    header .logo,
+    .header__logo {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    /* STATISTICHE più piccole */
+    .stat,
+    .stats__item {
+        transform: scale(0.95);
+    }
+
+    /* CURIOSITÀ più piccole */
+    .curiosita-card,
+    .curiosita__card {
+        transform: scale(0.95);
+    }
+
+    /* FOOTER adattivo */
+    footer,
+    .footer {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    /* MAIN più stretto */
+    main,
+    .page-main {
+        padding: 20px 10px;
+    }
 }
