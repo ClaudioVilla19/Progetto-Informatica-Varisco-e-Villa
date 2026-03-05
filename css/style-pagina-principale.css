@@ -1,22 +1,16 @@
-/* RESET BASE */
+
 html,
 body {
     padding: 0;
     margin: 0;
 }
 
-/* ===========================
-   BODY
-=========================== */
 
 body {
     background-color: #164fbd;
     font-family: Arial, sans-serif;
 }
 
-/* ===========================
-   HEADER (BEM + tuo codice)
-=========================== */
 
 header,
 .header {
@@ -26,7 +20,6 @@ header,
     position: relative;
 }
 
-/* logo = elemento BEM: header__logo */
 header .logo,
 .header__logo {
     width: 80px;
@@ -36,7 +29,6 @@ header .logo,
     left: 15px;
 }
 
-/* titolo = header__title */
 #titolo-header,
 .header__title {
     text-align: center;
@@ -47,7 +39,6 @@ header .logo,
     padding: 0px 0px 10px 0px;
 }
 
-/* menu = header__nav */
 #menu-principale,
 .header__nav {
     display: flex;
@@ -59,7 +50,6 @@ header .logo,
     list-style: none;
 }
 
-/* voce menu = header__nav-item */
 #menu-principale li,
 .header__nav-item {
     margin: 0;
@@ -68,7 +58,6 @@ header .logo,
     font-size: 16px;
 }
 
-/* link = header__nav-link */
 a,
 .header__nav-link {
     text-decoration: none;
@@ -76,7 +65,6 @@ a,
     font-weight: bold;
 }
 
-/* link nel menu (tolgo solo il position:absolute che rompe il layout) */
 #menu-principale li a,
 .header__nav-link {
     display: block;
@@ -94,9 +82,6 @@ a,
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
 }
 
-/* ===========================
-   MAIN (BEM: page-main)
-=========================== */
 
 main,
 .page-main {
@@ -106,9 +91,6 @@ main,
     color: #fff;
 }
 
-/* ===========================
-   HERO (già ok, aggiungo BEM)
-=========================== */
 
 .hero,
 .hero-block {
@@ -134,9 +116,6 @@ main,
     margin: 0 0 8px 0;
 }
 
-/* ===========================
-   STATS SECTION (BEM)
-=========================== */
 
 .stats-section,
 .stats {
@@ -210,9 +189,6 @@ main,
     color: #333;
 }
 
-/* ===========================
-   CURIOSITÀ SECTION (BEM)
-=========================== */
 
 .curiosita-section,
 .curiosita {
@@ -283,9 +259,6 @@ main,
     font-size: 1rem;
 }
 
-/* ===========================
-   FOOTER (BEM)
-=========================== */
 
 footer,
 .footer {
@@ -297,23 +270,14 @@ footer,
     font-size: 20px;
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
-
-/* Tablet / smartphone */
-/* ===========================
-   RESPONSIVE — TABLET
-=========================== */
 
 @media (max-width: 900px) {
     #menu-principale,
     .header__nav {
-        justify-content: center;   /* invece di space-around */
-        gap: 10px;                 /* riduce la distanza tra le voci */
+        justify-content: center;   
+        gap: 10px;                 
     }
 
-    /* HERO in colonna */
     .hero,
     .hero-block {
         flex-direction: column;
@@ -325,7 +289,6 @@ footer,
         width: 100%;
     }
 
-    /* STATISTICHE in colonna */
     .stats-row,
     .stats__row {
         flex-direction: column;
@@ -338,7 +301,6 @@ footer,
         margin: 0 auto;
     }
 
-    /* CURIOSITÀ in colonna */
     .curiosita-grid,
     .curiosita__grid {
         grid-template-columns: 1fr;
@@ -351,7 +313,6 @@ footer,
         margin: 0 auto;
     }
 
-    /* MENU diventa più morbido */
     #menu-principale,
     .header__nav {
         gap: 15px;
@@ -359,13 +320,9 @@ footer,
     }
 }
 
-/* ===========================
-   RESPONSIVE — SMARTPHONE
-=========================== */
 
 @media (max-width: 600px) {
 
-    /* MENU VERTICALE */
     #menu-principale,
     .header__nav {
         flex-direction: column;
@@ -375,19 +332,17 @@ footer,
 
     #menu-principale li a,
     .header__nav-link {
-        position: static;     /* fondamentale per farlo funzionare */
+        position: static;     
         padding: 8px 12px;
         font-size: 16px;
     }
 
-    /* TITOLO più piccolo */
     #titolo-header,
     .header__title {
         font-size: 28px;
         padding-top: 10px;
     }
 
-    /* LOGO più piccolo */
     header .logo,
     .header__logo {
         width: 60px;
@@ -395,26 +350,22 @@ footer,
         left: 10px;
     }
 
-    /* STATISTICHE più piccole */
     .stat,
     .stats__item {
         transform: scale(0.95);
     }
 
-    /* CURIOSITÀ più piccole */
     .curiosita-card,
     .curiosita__card {
         transform: scale(0.95);
     }
 
-    /* FOOTER adattivo */
     footer,
     .footer {
         font-size: 16px;
         padding: 12px;
     }
 
-    /* MAIN più stretto */
     main,
     .page-main {
         padding: 20px 10px;
