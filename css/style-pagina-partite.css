@@ -230,7 +230,7 @@ header .logo,
     justify-content: center;
     align-items: flex-start;
     gap: 60px;
-    padding: 20px 0;
+    padding: 20px 30px;
 }
 
 .bracket .round:nth-child(2),
@@ -319,90 +319,112 @@ footer,
 
 @media (max-width: 900px) {
 
-    /* Squadre */
-    .squadre-grid,
-    .gruppo__grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 14px;
+    /* Bracket più stretto */
+    .bracket,
+    .bracket__container {
+        gap: 25px;              /* prima 60px */
+        padding: 10px 0;
+        transform: scale(0.95); /* leggero rimpicciolimento */
+    }
+
+    /* Ogni round si restringe leggermente */
+    .round,
+    .bracket__round {
+        width: 220px;           /* prima 260px */
+        min-width: 200px;
+        transform: scale(0.92);
+    }
+
+    /* Match più compatti */
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Tabelle e card si riducono leggermente */
+    .tabella-girone table,
+    .girone__table {
+        transform: scale(0.95);
     }
 
     .card,
     .squadra__card {
         transform: scale(0.92);
     }
+}
+@media (max-width: 600px) {
 
-    /* Tabelle */
+    /* Bracket verticale */
+    .bracket,
+    .bracket__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        transform: scale(0.9);
+    }
+
+    /* Round centrati e più piccoli */
+    .round,
+    .bracket__round {
+        width: 90%;
+        max-width: 260px;
+        transform: scale(0.9);
+    }
+
+    /* Match più piccoli */
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Tabelle più piccole */
     .tabella-girone table,
     .girone__table {
         width: 100%;
-        transform: scale(0.95);
-    }
-
-    /* Bracket */
-    .bracket,
-    .bracket__container {
-        gap: 25px;
-    }
-
-    .round,
-    .bracket__round {
         transform: scale(0.9);
     }
-}
 
-/* ===========================
-   RESPONSIVE — SMARTPHONE (<600)
-=========================== */
-
-@media (max-width: 600px) {
-
-    .titolo,
-    .header__title {
-        font-size: 28px;
-    }
-
-    header .logo,
-    .header__logo {
-        width: 60px;
-    }
-
-    /* Squadre */
-    .squadre-grid,
-    .gruppo__grid {
-        grid-template-columns: 1fr;
-    }
-
+    /* Card squadre più piccole */
     .card,
     .squadra__card {
         width: 90%;
         margin: 0 auto;
         transform: scale(0.88);
     }
+}
+@media (max-width: 900px) and (min-width: 600px) {
 
-    /* Tabelle */
-    .tabella-girone table,
-    .girone__table {
-        font-size: 0.85rem;
-        transform: scale(0.9);
-    }
-
-    /* Bracket */
+    /* Contenitore del cammino più stretto */
     .bracket,
     .bracket__container {
-        flex-direction: column;
-        gap: 30px;
+        gap: 20px;              /* prima 60px */
+        padding: 10px 0;
+        transform: scale(0.85); /* schiaccia tutto il bracket */
+        transform-origin: top center;
     }
 
+    /* Ogni round si restringe */
     .round,
     .bracket__round {
-        width: 90%;
-        margin: 0 auto;
-        transform: scale(0.9);
+        width: 200px;           /* prima 260px */
+        min-width: 180px;
+        padding: 15px;
     }
 
-    footer,
-    .footer {
-        font-size: 16px;
-        padding: 12px;
+    /* Match più compatti */
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    /* Titoli più piccoli */
+    .round h3,
+    .bracket__round-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
     }
 }
+
