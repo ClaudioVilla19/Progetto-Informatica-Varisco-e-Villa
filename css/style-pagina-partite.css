@@ -1,22 +1,13 @@
-/* RESET */
 html, body {
     padding: 0;
     margin: 0;
 }
-
-/* ===========================
-   BODY
-=========================== */
 
 body {
     background-color: #164fbd;
     font-family: Arial;
     color: #fff;
 }
-
-/* ===========================
-   HEADER (BEM)
-=========================== */
 
 header,
 .header {
@@ -54,10 +45,6 @@ header .logo,
     margin: 0;
 }
 
-/* ===========================
-   INTRO
-=========================== */
-
 .intro,
 .intro__section {
     text-align: center;
@@ -69,10 +56,6 @@ header .logo,
     font-size: 28px;
     margin-bottom: 10px;
 }
-
-/* ===========================
-   GRUPPI
-=========================== */
 
 .gruppi,
 .gruppi__container {
@@ -143,10 +126,6 @@ header .logo,
     margin-bottom: 10px;
 }
 
-/* ===========================
-   RISULTATI GIRONI
-=========================== */
-
 .risultati-gironi,
 .gironi__section {
     margin: 60px 0;
@@ -208,9 +187,31 @@ header .logo,
     letter-spacing: 0.5px;
 }
 
-/* ===========================
-   CAMMINO / BRACKET
-=========================== */
+/* Allineamento perfetto colonne tabella */
+.tabella-girone th:nth-child(1),
+.tabella-girone td:nth-child(1) {
+    width: 160px; /* Squadre */
+    text-align: left;
+}
+
+.tabella-girone th:nth-child(2),
+.tabella-girone td:nth-child(2) {
+    width: 40px; /* Punti */
+    text-align: center;
+}
+
+.tabella-girone th:nth-child(3),
+.tabella-girone td:nth-child(3) {
+    width: 40px; /* GF */
+    text-align: center;
+}
+
+.tabella-girone th:nth-child(4),
+.tabella-girone td:nth-child(4) {
+    width: 40px; /* GS */
+    text-align: center;
+}
+
 
 .cammino,
 .cammino__section {
@@ -300,10 +301,6 @@ header .logo,
     text-align: right;
 }
 
-/* ===========================
-   FOOTER
-=========================== */
-
 footer,
 .footer {
     text-align: center;
@@ -313,36 +310,29 @@ footer,
     margin-top: 40px;
 }
 
-/* ===========================
-   RESPONSIVE — TABLET (900–600)
-=========================== */
-
 @media (max-width: 900px) {
 
-    /* Bracket più stretto */
     .bracket,
     .bracket__container {
-        gap: 25px;              /* prima 60px */
+        gap: 25px;              
         padding: 10px 0;
-        transform: scale(0.95); /* leggero rimpicciolimento */
+        transform: scale(0.95);
     }
 
-    /* Ogni round si restringe leggermente */
     .round,
     .bracket__round {
-        width: 220px;           /* prima 260px */
+        width: 220px;           
         min-width: 200px;
         transform: scale(0.92);
     }
 
-    /* Match più compatti */
     .match,
     .bracket__match {
         padding: 8px 10px;
         font-size: 0.85rem;
     }
 
-    /* Tabelle e card si riducono leggermente */
+
     .tabella-girone table,
     .girone__table {
         transform: scale(0.95);
@@ -355,7 +345,7 @@ footer,
 }
 @media (max-width: 600px) {
 
-    /* Bracket verticale */
+
     .bracket,
     .bracket__container {
         flex-direction: column;
@@ -364,7 +354,6 @@ footer,
         transform: scale(0.9);
     }
 
-    /* Round centrati e più piccoli */
     .round,
     .bracket__round {
         width: 90%;
@@ -372,21 +361,18 @@ footer,
         transform: scale(0.9);
     }
 
-    /* Match più piccoli */
     .match,
     .bracket__match {
         padding: 8px 10px;
         font-size: 0.8rem;
     }
 
-    /* Tabelle più piccole */
     .tabella-girone table,
     .girone__table {
         width: 100%;
         transform: scale(0.9);
     }
 
-    /* Card squadre più piccole */
     .card,
     .squadra__card {
         width: 90%;
@@ -396,31 +382,27 @@ footer,
 }
 @media (max-width: 900px) and (min-width: 600px) {
 
-    /* Contenitore del cammino più stretto */
     .bracket,
     .bracket__container {
-        gap: 20px;              /* prima 60px */
+        gap: 20px;              
         padding: 10px 0;
-        transform: scale(0.85); /* schiaccia tutto il bracket */
+        transform: scale(0.85); 
         transform-origin: top center;
     }
 
-    /* Ogni round si restringe */
     .round,
     .bracket__round {
-        width: 200px;           /* prima 260px */
+        width: 200px;           
         min-width: 180px;
         padding: 15px;
     }
 
-    /* Match più compatti */
     .match,
     .bracket__match {
         padding: 8px 10px;
         font-size: 0.85rem;
     }
 
-    /* Titoli più piccoli */
     .round h3,
     .bracket__round-title {
         font-size: 1rem;
