@@ -1,0 +1,373 @@
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+    background-color: #164fbd;
+    font-family: Arial, sans-serif;
+}
+
+
+header,
+.header {
+    background: #d8e0e8;
+    padding: 10px 16px;
+    width: 100%;
+    position: relative;
+}
+
+header .logo,
+.header__logo {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+#titolo-header,
+.header__title {
+    text-align: center;
+    margin: 0;
+    color: #0f2252;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 0px 0px 10px 0px;
+}
+
+#menu-principale,
+.header__nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    padding: 0;
+    margin-top: 8px;
+    list-style: none;
+}
+
+#menu-principale li,
+.header__nav-item {
+    margin: 0;
+    text-decoration: none;
+    color: #000;
+    font-size: 16px;
+}
+
+a,
+.header__nav-link {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+#menu-principale li a,
+.header__nav-link {
+    display: block;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+    font-size: 17px;
+    position: static;
+    
+}
+
+#menu-principale li a:hover,
+.header__nav-link:hover {
+    background-color: #164fbd;
+    color: #d8e0e8;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+}
+
+
+main,
+.page-main {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 15px;
+    color: #fff;
+}
+
+
+.hero,
+.hero-block {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.hero-img,
+.hero__img {
+    width: 60%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 10px;
+    flex-shrink: 0;
+    object-fit: contain;
+    object-position: center;
+}
+
+.hero-text h2,
+.hero__title {
+    margin: 0 0 8px 0;
+}
+
+
+.stats-section,
+.stats {
+    margin: 20px 0 40px;
+}
+
+.stats-section h2,
+.stats__title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.stats-row,
+.stats__row {
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.stat,
+.stats__item {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 22px 20px;
+    border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.stat:hover,
+.stats__item:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+}
+
+.stat::after,
+.stats__item::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to top, rgba(22, 79, 189, 0.55), rgba(22, 79, 189, 0));
+    pointer-events: none;
+}
+
+.stat-icon,
+.stats__icon {
+    width: 65px;
+    height: 65px;
+    object-fit: contain;
+}
+
+.stat-number,
+.stats__number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #0f2252;
+}
+
+.stat-label,
+.stats__label {
+    font-size: 1rem;
+    color: #333;
+}
+
+
+.curiosita-section,
+.curiosita {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.curiosita-title,
+.curiosita__title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: #ffffff;
+}
+
+.curiosita-grid,
+.curiosita__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 60px;
+}
+
+.curiosita-card,
+.curiosita__card {
+    padding: 25px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform .25s ease, box-shadow .25s ease;
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    position: relative;
+    overflow: hidden;
+}
+
+.curiosita-card::after,
+.curiosita__card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to top, rgba(22, 79, 189, 0.55), rgba(22, 79, 189, 0));
+    pointer-events: none;
+}
+
+.curiosita-card:hover,
+.curiosita__card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.curiosita-icon,
+.curiosita__icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 12px;
+}
+
+.curiosita-card h3,
+.curiosita__card-title {
+    margin: 8px 0;
+    color: #0f2252;
+    font-size: 1.3rem;
+}
+
+.curiosita-card p,
+.curiosita__card-text {
+    color: #333;
+    font-size: 1rem;
+}
+
+
+footer,
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #d8e0e8;
+    color: #0f2252;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+@media (max-width: 900px) {
+    #menu-principale,
+    .header__nav {
+        justify-content: center;   
+        gap: 10px;                 
+    }
+
+    .hero,
+    .hero-block {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-img,
+    .hero__img {
+        width: 100%;
+    }
+
+    .stats-row,
+    .stats__row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .stat,
+    .stats__item {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .curiosita-grid,
+    .curiosita__grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .curiosita-card,
+    .curiosita__card {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    #menu-principale,
+    .header__nav {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    #menu-principale,
+    .header__nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #menu-principale li a,
+    .header__nav-link {
+        position: static;     
+        padding: 8px 12px;
+        font-size: 16px;
+    }
+
+    #titolo-header,
+    .header__title {
+        font-size: 28px;
+        padding-top: 10px;
+    }
+
+    header .logo,
+    .header__logo {
+        width: 60px;
+        top: 10px;
+        left: 10px;
+    }
+
+    .stat,
+    .stats__item {
+        transform: scale(0.95);
+    }
+
+    .curiosita-card,
+    .curiosita__card {
+        transform: scale(0.95);
+    }
+
+    footer,
+    .footer {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    main,
+    .page-main {
+        padding: 20px 10px;
+    }
+}

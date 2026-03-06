@@ -1,0 +1,412 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #164fbd;
+    font-family: Arial;
+    color: #fff;
+}
+
+header,
+.header {
+    background: #d8e0e8;
+    padding: 30px 16px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.logo,
+.header__logo {
+    width: 26px;
+    height: 26px;
+    background: #ccc;
+    border-radius: 50%;
+}
+
+header .logo,
+.header__logo {
+    width: 80px;
+    height: auto;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
+
+.titolo,
+.header__title {
+    color: #0f2252;
+    font-size: 40px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.intro,
+.intro__section {
+    text-align: center;
+    margin: 60px 0 25px;
+}
+
+.intro h2,
+.intro__title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.gruppi,
+.gruppi__container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.gruppo,
+.gruppo__block {
+    margin-bottom: 45px;
+}
+
+.gruppo h3,
+.gruppo__title {
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #ffffff;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+.squadre-grid,
+.gruppo__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+}
+
+.card,
+.squadra__card {
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    border-radius: 14px;
+    padding: 18px 10px;
+    text-align: center;
+    color: #0f2252;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::after,
+.squadra__card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 45%;
+    background: linear-gradient(to top, rgba(22, 79, 189, 0.55), rgba(22, 79, 189, 0));
+    pointer-events: none;
+}
+
+.card:hover,
+.squadra__card:hover {
+    transform: translateY(-6px) scale(1.04);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+.card img,
+.squadra__img {
+    width: 70px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.risultati-gironi,
+.gironi__section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.risultati-gironi h2,
+.gironi__title {
+    font-size: 2rem;
+    margin-bottom: 25px;
+}
+
+.tabella-girone,
+.girone__table-block {
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tabella-girone h3,
+.girone__table-title {
+    margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.tabella-girone table,
+.girone__table {
+    width: 95%;
+    margin: auto;
+    border-collapse: collapse;
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.tabella-girone th,
+.tabella-girone td,
+.girone__cell {
+    padding: 12px;
+    color: #0f2252;
+}
+
+.tabella-girone tr:nth-child(even),
+.girone__row--even {
+    background: rgba(22, 79, 189, 0.08);
+}
+
+.tabella-girone tr:hover,
+.girone__row:hover {
+    background: rgba(22, 79, 189, 0.18);
+    transition: 0.2s ease;
+}
+
+.tabella-girone th,
+.girone__header {
+    background: rgba(22, 79, 189, 0.35);
+    font-weight: bold;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* Allineamento perfetto colonne tabella */
+.tabella-girone th:nth-child(1),
+.tabella-girone td:nth-child(1) {
+    width: 160px; /* Squadre */
+    text-align: left;
+}
+
+.tabella-girone th:nth-child(2),
+.tabella-girone td:nth-child(2) {
+    width: 40px; /* Punti */
+    text-align: center;
+}
+
+.tabella-girone th:nth-child(3),
+.tabella-girone td:nth-child(3) {
+    width: 40px; /* GF */
+    text-align: center;
+}
+
+.tabella-girone th:nth-child(4),
+.tabella-girone td:nth-child(4) {
+    width: 40px; /* GS */
+    text-align: center;
+}
+
+
+.cammino,
+.cammino__section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.cammino h2,
+.cammino__title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+}
+
+.bracket,
+.bracket__container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 60px;
+    padding: 20px 30px;
+}
+
+.bracket .round:nth-child(2),
+.bracket__round:nth-child(2) {
+    align-self: center;
+}
+
+.bracket .round:nth-child(3),
+.bracket__round:nth-child(3) {
+    align-self: center;
+}
+
+.bracket .round:nth-child(4),
+.bracket__round:nth-child(4) {
+    align-self: center;
+}
+
+.round,
+.bracket__round {
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    padding: 20px;
+    border-radius: 14px;
+    min-width: 220px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 260px;
+}
+
+.round h3,
+.bracket__round-title {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.match,
+.bracket__match {
+    background: linear-gradient(135deg, #ffffffd0, #dfe7ff);
+    padding: 10px 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    font-weight: bold;
+    color: #0f2252;
+}
+
+.team,
+.bracket__team {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 4px 0;
+}
+
+.team span,
+.bracket__team-name {
+    flex: 1;
+    color: #0f2252;
+    font-weight: bold;
+}
+
+.score,
+.bracket__score {
+    width: 20px;
+    text-align: right;
+}
+
+footer,
+.footer {
+    text-align: center;
+    padding: 15px;
+    background: #0f2252;
+    color: #fff;
+    margin-top: 40px;
+}
+
+@media (max-width: 900px) {
+
+    .bracket,
+    .bracket__container {
+        gap: 25px;              
+        padding: 10px 0;
+        transform: scale(0.95);
+    }
+
+    .round,
+    .bracket__round {
+        width: 220px;           
+        min-width: 200px;
+        transform: scale(0.92);
+    }
+
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+
+    .tabella-girone table,
+    .girone__table {
+        transform: scale(0.95);
+    }
+
+    .card,
+    .squadra__card {
+        transform: scale(0.92);
+    }
+}
+@media (max-width: 600px) {
+
+
+    .bracket,
+    .bracket__container {
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+        transform: scale(0.9);
+    }
+
+    .round,
+    .bracket__round {
+        width: 90%;
+        max-width: 260px;
+        transform: scale(0.9);
+    }
+
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.8rem;
+    }
+
+    .tabella-girone table,
+    .girone__table {
+        width: 100%;
+        transform: scale(0.9);
+    }
+
+    .card,
+    .squadra__card {
+        width: 90%;
+        margin: 0 auto;
+        transform: scale(0.88);
+    }
+}
+@media (max-width: 900px) and (min-width: 600px) {
+
+    .bracket,
+    .bracket__container {
+        gap: 20px;              
+        padding: 10px 0;
+        transform: scale(0.85); 
+        transform-origin: top center;
+    }
+
+    .round,
+    .bracket__round {
+        width: 200px;           
+        min-width: 180px;
+        padding: 15px;
+    }
+
+    .match,
+    .bracket__match {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .round h3,
+    .bracket__round-title {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+}
+
